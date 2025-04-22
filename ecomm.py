@@ -13,7 +13,7 @@ def main():
     if uploaded_file is not None:
         try:
             if uploaded_file.name.endswith('.csv'):
-                data = pd.read_scv('uploaded_file')
+                data = pd.read_csv('uploaded_file')
                 st.sidebar.success("File uploaded successfully.")
             else:
                 data = pd.read_excel(uploaded_file)
